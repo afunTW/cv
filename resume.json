@@ -1,0 +1,214 @@
+{
+  "basics": {
+    "name": "Chen Ming Yang",
+    "label": "Programmer / Data Scientist",
+    "picture": "img/profile.jpg",
+    "email": "afin@iis.sinica.edu.tw",
+    "phone": "(933) 964-787",
+    "website": "https://blog.moli.rocks/author/afun/",
+    "summary": "資工背景，現任中研院研發替代役，原本碩士是在通訊領域研究 4G 省電排程，現在轉為資料科學領域學習資料分析，機器學習與深度學習",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Taipei",
+      "countryCode": "886",
+      "region": "Taiwan"
+    },
+    "profiles": [
+      {
+        "network": "Facebook",
+        "username": "Chen Ming Yang",
+        "url": "https://www.facebook.com/afunTW"
+      },
+      {
+        "network": "Instagram",
+        "username": "afuntw",
+        "url": "https://www.instagram.com/afuntw/"
+      },
+      {
+        "network": "Telegram",
+        "username": "a_fun",
+        "url": "https://t.me/a_fun"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Sinica IIS",
+      "position": "RDSS",
+      "website": "http://www.iis.sinica.edu.tw/index_zh.html",
+      "startDate": "2016-09-22",
+      "endDate": "",
+      "summary": "中央研究院（簡稱中研院）為中華民國的國家最高學術研究機構，直接隸屬於總統府，其任務包括人文及科學研究，指導、聯絡及獎勵學術研究，培養高級學術研究人才，並兼有科學與人文之研究; 資訊科學研究所除了從事資訊科學領域的基礎研究之外，亦以開發具前瞻性之尖端技術與發展以應用為導向的最先進系統為職志",
+      "highlights": [
+        "台灣資料科學協會"
+      ]
+    },
+    {
+      "company": "imonology",
+      "position": "Intern",
+      "website": "https://www.imoncloud.com/",
+      "startDate": "2015-09-01",
+      "endDate": "2016-04-30",
+      "summary": "新創公司比起傳統公司更願意研究新技術，透過 Scrum 並且善用於各種工具讓整個開發流程更異於管理控制.",
+      "highlights": [
+        "imoncloud"
+      ]
+    },
+    {
+      "company": "ASUS",
+      "position": "Campus Executive Officer/ Intern",
+      "website": "https://www.asus.com/tw/",
+      "startDate": "2012-06-30",
+      "endDate": "2013-06-30",
+      "summary": "公司會透過實戰讓實習生經由支援各種活動來了解一間企業在第一線的戰略規劃以及產業生態.",
+      "highlights": [
+        "win8 台北產品發表會支援",
+        "台中資訊展支援",
+        "台中經銷商大會支援"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "台灣資料科學協會",
+      "position": "volunteer",
+      "website": "http://foundation.datasci.tw/",
+      "startDate": "2016-09-22",
+      "endDate": "",
+      "summary": "包含協助內部資訊管理，活動工作人員與助教",
+      "highlights": [
+        "20170212 手把手的深度學習實務助教"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "National Chi Nan University",
+      "area": "Computer Networking",
+      "studyType": "Master",
+      "startDate": "2015-09-01",
+      "endDate": "2016-07-30",
+      "gpa": "",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "Memorial University of Newfoundland",
+      "area": "Computer Science",
+      "studyType": "Bachelor Exchange Student",
+      "startDate": "2014-09-01",
+      "endDate": "2015-04-30",
+      "gpa": "3.5, 3.6",
+      "courses": [
+        "COMP 1710 - Object-Orient Program",
+        "COMP 2500 - Data Anlys with Script Language",
+        "COMP 3715 - Network Comp/ Web Application",
+        "COMP 3719 - Theory of computation and algorithm",
+        "COMP 4759 - Computer Network"
+      ]
+    },
+    {
+      "institution": "National Chi Nan University",
+      "area": "Computer Science and Information Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2011-09-01",
+      "endDate": "2015-06-30",
+      "gpa": "",
+      "courses": [
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Master research competition",
+      "date": "2016-06-23",
+      "awarder": "",
+      "summary": "First Prize"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "beginner",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "PHP"
+      ]
+    },
+    {
+      "name": "Database",
+      "level": "beginner",
+      "keywords": [
+        "MySQL",
+        "mongodb"
+      ]
+    },
+    {
+      "name": "Data Analysis",
+      "level": "beginner",
+      "keywords": [
+        "TFIDF",
+        "FB fanpage keyword"
+      ]
+    },
+    {
+      "name": "Linux",
+      "level": "junior",
+      "keywords": [
+        "Ubuntu"
+      ]
+    },
+    {
+      "name": "MIS",
+      "level": "junior",
+      "keywords": [
+        "NIS",
+        "iptable",
+        "smaba",
+        "cacti",
+        "apache2",
+        "permission control"
+      ]
+    },
+    {
+      "name": "Crawling",
+      "level": "junior",
+      "keywords": [
+        "Python",
+        "FB API",
+        "Selenium",
+        "requests",
+        "BeautifulSoup4"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Basic Communication"
+    },
+    {
+      "language": "Chinese",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Machine Learning",
+      "keywords": [
+        "Regression",
+        "Classification"
+      ]
+    },
+    {
+      "name": "Deep Learning",
+      "keywords": [
+        "DNN",
+        "CNN"
+      ]
+    }
+  ]
+}
