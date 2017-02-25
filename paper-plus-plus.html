@@ -1,0 +1,890 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+        <title>Chen Ming Yang's Resume</title>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700'
+        rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600'
+        rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <style>
+            body, html {
+              padding-top:2.5em;
+              margin:0;
+              background-color:#fafafa;
+              font-size: 13pt;
+              font-family: "Open Sans";
+            }
+            
+            h2{
+              font-weight: normal;
+              margin: 0.5em;
+              margin-bottom: 0.2em;
+            }
+            
+            h3{
+              font-weight:300;
+              font-size:1em;
+              margin: 0em;
+            }
+            
+            .note {
+              display:block;
+              position: absolute;
+              top:10px;
+              left:10px;
+            
+              font-size: 0.6em;
+            }
+            
+            .summary p{
+              font-size:0.7em;
+              font-weight:400;
+            
+              color: #424242;
+            
+              margin-left:2em;
+            }
+            
+            .new {
+              background-color: #81C784;
+            
+              border: 1px solid #757575;
+              padding: 1px;
+              border-radius: 4px;
+            }
+            
+            /* Header */
+            
+            header {
+              width:100%;
+              vertical-align: middle;
+              text-align: center;
+              font-family: "Merriweather";
+            }
+            
+            .header-content {
+              display: inline-block;
+            }
+            
+            .pic {
+              margin: 0 auto;
+              margin-top:-3em;
+            
+              border-radius:10em;
+              height:0em;
+              width:auto;
+            
+              border: 2px solid #dddddd;
+              cursor:pointer;
+            
+              transition: height .6s, margin-top .6s, border 0.3s;
+            }
+            
+            .pic.loaded {
+              height: 6em;
+            }
+            
+            
+            @keyframes intro {
+              from {
+                height:0em;
+              }
+            
+              to {
+                height: 6em;
+              }
+            }
+            
+            .pic:hover, .pic:active{
+              height: 14em;
+              margin-top: -5em;
+              border: 4px solid #dddddd;
+            }
+            
+            header p {
+              text-align:center;
+            
+              margin:0;
+            
+              color: #212121;
+            }
+            
+            .first-name {
+               font-size: 1.05em;
+            }
+            
+            .subtitle {
+              font-family: "Merriweather";
+              font-size:0.7em;
+              font-weight:500;
+              color: #424242;
+            }
+            
+            /* Information */
+            
+            .paper {
+              margin: 0 auto;
+              margin-bottom:1em;
+            
+              background-color:white;
+              width:60%;
+            
+              padding:0.5em 0 0.5em 0;
+            
+              border-top: 1px solid #dddddd;
+              border-left: 1px solid #dddddd;
+              border-right: 1px solid #dddddd;
+              border-bottom: 3px solid #dddddd;
+              border-radius:3px;
+            }
+            
+            /* Content Part */
+            
+            .content-wrapper {
+              padding-right:7.25%;
+            }
+            
+            .content {
+              display:table;
+              width:100%;
+            
+              padding-top:1.5em;
+            
+              /*border-top: 1px solid #eeeeee;*/
+            }
+            
+            
+            .work-listing .first-listing{
+              margin-top: 1.8em;
+            }
+            
+            .content:last-child {
+              margin-bottom: 2em;
+            }
+            
+            body > div > article > div > section:last-child {
+              padding-bottom:1.5em;
+            }
+            
+            .row {
+                display:table-row;
+            }
+            
+            .row div {
+                display:table-cell;
+            }
+            
+            .content-cat {
+              text-align:center;
+              vertical-align:middle;
+              font-variant:small-caps;
+            
+              letter-spacing: 1px;
+            
+              color: #212121;
+            
+              font-family: "Merriweather";
+            
+              padding-left:6.66%;
+              width:30%;
+            }
+            
+            .content-cat p {
+              font-size:0.55em;
+              font-weight:600;
+            
+              margin-bottom:0;
+            }
+            
+            .content-text {
+              border-left:1px solid #dddddd;
+              transition: border 0.66s ease-in;
+            }
+            
+            .big-text {
+              vertical-align:top;
+            }
+            
+            .content-text ul {
+              padding:0;
+              margin:0;
+              margin-top:0.15em;
+            
+              width:85%;
+              margin-left:1.5em;
+            }
+            
+            .content-text ul:last-child {
+              margin-bottom:0.5em;
+            }
+            
+            .content-text ul li {
+              font-size:0.7em;
+            
+              display:inline-block;
+            
+            }
+            
+            .content-text ul li:first-child {
+              width:35%;
+            
+              color: #424242;
+            
+              font-weight:600;
+            }
+            
+            .content-text ul li a:hover {
+              color:#4fc3f7;
+            }
+            
+            .work-listing p {
+              font-size:0.7em;
+            
+              color: #424242;
+            
+              margin-left:2em;
+              margin-top:0.45em;
+              margin-bottom: 0.45em;
+            }
+            
+            div.content-text.work-listing.education-listing > p:nth-child(2) {
+              margin-top:0.25em;
+            }
+            
+            .work-listing .highlight {
+              font-size:0.7em;
+              font-weight:400;
+            
+              color: #424242;
+            
+              margin-left:3.25em;
+              padding-left:0.5em;
+            
+              border-left:1px solid #dddddd;
+            }
+            
+            .education-listing > .heading {
+              font-weight:600;
+            
+              margin-top:0.75em;
+              margin-left:2em;
+            }
+            
+            .education-listing > .highlight {
+              margin-left:3.25em;
+            }
+            
+            .highlight {
+              transition: border .33s ease-in;
+            }
+            
+            .profiles-print{
+              display: none;
+            }
+            
+            .profiles-listing ul li, .profiles-listing ul li:first-child {
+              width:24%;
+              font-weight: normal;
+            }
+            
+            .work-content, .education-content {
+              padding-top: .75em;
+            }
+            
+            div.content-text.skills-listing > p {
+              font-size:0.7em;
+              font-weight:400;
+            
+              margin-left: 2em;
+              margin-top: 0.45em;
+              margin-bottom: 0.45em;
+            }
+            
+            .no-nl{
+              display: inline-block;
+            }
+            
+            a{
+              text-decoration: none;
+              color: #0277bd;
+            }
+            
+            .fa{
+              color: #000;
+            }
+            
+            .network{
+              display: inline-block;
+              vertical-align: middle;
+              margin-top: -0.7em;
+            }
+            
+            @media(max-width:1400px) {
+              .paper {
+                width:80%;
+              }
+            
+              .content-cat{
+                padding-left:2%;
+              }
+            
+              .content-wrapper{
+                padding-right: 2%;
+              }
+            }
+        </style>
+        <style media="screen">
+            @media(max-width:795px) {
+              .paper {
+                width:96%;
+              }
+            
+              .pic{
+                cursor: auto;
+            
+              }
+            
+              .content-cat{
+                padding-left:1%;
+              }
+            
+              .content-wrapper{
+                padding-right: 1%;
+              }
+            
+              .profiles-listing ul li, .profiles-listing ul li:first-child{
+                width: 49%;
+              }
+            
+              .small-fullwidth-row{
+                display: block;
+              }
+            
+              .small-fullwidth-row div{
+                display: block;
+                width:100%;
+              }
+            
+              .small-fullwidth-row .content-text{
+                border-left: 2px solid #dddddd;
+              }
+            
+              .small-center{
+                text-align: center;
+              }
+            
+              .work-listing .first-listing{
+                margin-top: 0.45em;
+              }
+            }
+        </style>
+        <style media="print">
+            body, html {
+              background-color: white;
+              padding-top: 1.5em;
+              font-size:12pt;
+              font-family: "Merriweather";
+            }
+            
+            a{
+              text-decoration: none;
+              color: #000;
+            }
+            
+            h2{
+              margin-top:0em;
+            }
+            
+            .paper {
+              width:100%;
+              border: 0;
+            
+              padding-top: 0;
+            }
+            
+            header p {
+              font-size: 1.3em;
+            }
+            
+            .subtitle {
+              font-size: 0.7em;
+            }
+            
+            .header-pic {
+              float:left;
+            }
+            
+            .pic{
+                height:4.2em;
+                width:4.2em;
+            }
+            
+            .pic.loaded {
+              height: 4.2em;
+            }
+            
+            .profiles {
+              display:none;
+            }
+            
+            .profiles-print{
+              display: table;
+            }
+            
+            .content {
+              page-break-inside:avoid;
+              page-break-after:auto;
+            }
+            
+            .header-text {
+              float:left;
+              margin-top: -1.6em;
+            }
+            
+            .content-wrapper > .content:first-child {
+              padding-top: 2em;
+            }
+            
+            .content:last-child {
+              padding-bottom: 0;
+            }
+            
+            .content-cat {
+              width:25%;
+              color:black;
+            }
+            
+            .content-cat p {
+              font-size:0.5em;
+              font-weight: 600;
+            }
+            
+            header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+              color:black;
+            }
+            
+            .content-text.skills-listing > ul > li span, .subtitle {
+              color:#212121;
+            }
+            
+            .content-text ul:last-child {
+              margin-bottom: 0.25em;
+            }
+            
+            .content-text ul li:first-child {
+              width:50%;
+            }
+            
+            .profiles-listing ul li:first-child {
+              width:32%;
+            }
+            
+            div.content-text.skills-listing > ul > li {
+              width:33%;
+            }
+            
+            .work-listing p {
+              margin-bottom: 0.1em;
+            }
+            
+            div.content-text.skills-listing > ul > li > p {
+              margin-top: 0.4em;
+              margin-bottom: 0.5em;
+            }
+            
+            div.content-text.skills-listing > ul > li {
+              padding-left: 1.5em;
+            }
+            
+            div.content-text.skills-listing > ul > li:first-child {
+              padding-left: 2em;
+            }
+            
+            .note {
+              display:none;
+            }
+            
+            .content-text:hover {
+              border-left:1px solid #eeeeee;
+            }
+            
+            .content-text ul li a:hover {
+              color:#4fc3f7;
+            }
+            
+            .summary p{
+              color: black;
+            }
+            
+            .highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+              border-left:1px solid #eeeeee;
+            }
+            
+            .big-text {
+              padding-top: 0;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="resume-wrapper">
+            <article class="paper">
+                <header>
+                    <div class="header-content">
+                        <div class="header-pic">
+                            <img src="img/profile.jpg" class="pic" alt="Chen Ming Yang" onload="var pic = this; setTimeout(function(){pic.className+=' loaded';},100);"
+                            />
+                        </div>
+                        <div class="header-text">
+                             <h2>Chen Ming Yang</h2>
+
+                            <p class="subtitle">Programmer / Data Scientist</p>
+                        </div>
+                    </div>
+                </header>
+                <div class="content-wrapper">
+                    <!-- CONTACT -->
+                    <section class="content">
+                        <div class="row">
+                            <div class="content-cat">
+                                 <h3>Contact</h3>
+
+                            </div>
+                            <div class="content-text">
+                                <ul>
+                                    <li>Email</li>
+                                    <li><a href="mailto:afin@iis.sinica.edu.tw">afin@iis.sinica.edu.tw</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>Phone</li>
+                                    <li>(933) 964-787</li>
+                                </ul>
+                                <ul>
+                                    <li>Website</li>
+                                    <li><a href="https://blog.moli.rocks/author/afun/">https://blog.moli.rocks/author/afun/</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- LOCATION -->
+                    <section class="content">
+                        <div class="row">
+                            <div class="content-cat">
+                                 <h3>Location</h3>
+
+                            </div>
+                            <div class="content-text">
+                                <ul>
+                                    <li>City</li>
+                                    <li>Taipei</li>
+                                </ul>
+                                <ul>
+                                    <li>Region</li>
+                                    <li>Taiwan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- LANGUAGE -->
+                    <section class="content">
+                        <div class="row">
+                            <div class="content-cat">
+                                 <h3>Languages</h3>
+
+                            </div>
+                            <div class="content-text">
+                                <ul>
+                                    <li>English</li>
+                                    <li>Basic Communication</li>
+                                </ul>
+                                <ul>
+                                    <li>Chinese</li>
+                                    <li>Native speaker</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- PROFILES for website-->
+                    <section class="content profiles">
+                        <div class="row">
+                            <div class="content-cat">
+                                 <h3>Profiles</h3>
+
+                            </div>
+                            <div class="content-text profiles-listing">
+                                <ul>
+                                    <li>	<a href="https://www.facebook.com/afunTW" target="_blank">
+														<i class="fa fa-2x fa-facebook-square"></i>
+							            	<span class="network">Facebook</span>
+													</a>
+
+                                    </li>
+                                    <li>	<a href="https://www.instagram.com/afuntw/" target="_blank">
+														<i class="fa fa-2x fa-instagram-square"></i>
+							            	<span class="network">Instagram</span>
+													</a>
+
+                                    </li>
+                                    <li>	<a href="https://t.me/a_fun" target="_blank">
+														<i class="fa fa-2x fa-telegram-square"></i>
+							            	<span class="network">Telegram</span>
+													</a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- PROFILES for print -->
+                    <section class="content profiles-print">
+                        <div class="row">
+                            <div class="content-cat">
+                                 <h3>Profiles</h3>
+
+                            </div>
+                            <div class="content-text">
+                                <ul>
+                                    <li>Facebook</li>
+                                    <li><a href="https://www.facebook.com/afunTW">facebook.com/afunTW</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>Instagram</li>
+                                    <li><a href="https://www.instagram.com/afuntw/">instagram.com/afuntw/</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>Telegram</li>
+                                    <li><a href="https://t.me/a_fun">t.me/a_fun</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content summary">
+                        <div class="row small-fullwidth-row">
+                            <div class="content-cat">
+                                 <h3>About Me</h3>
+
+                            </div>
+                            <div class="content-text work-content">
+                                <p>資工背景，現任中研院研發替代役，原本碩士是在通訊領域研究 4G 省電排程，現在轉為資料科學領域學習資料分析，機器學習與深度學習</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content">
+                        <div class="row small-fullwidth-row">
+                            <div class="content-cat big-text">
+                                	<h3>Work	Experience</h3>
+
+                            </div>
+                            <div class="content-text work-listing education-listing">
+                                <p class="small-center first-listing">	<strong>RDSS</strong> at <strong><a href="http://www.iis.sinica.edu.tw/index_zh.html" class="no-nl">Sinica IIS</a></strong>
+
+                                </p>
+                                <p>中央研究院（簡稱中研院）為中華民國的國家最高學術研究機構，直接隸屬於總統府，其任務包括人文及科學研究，指導、聯絡及獎勵學術研究，培養高級學術研究人才，並兼有科學與人文之研究;
+                                    資訊科學研究所除了從事資訊科學領域的基礎研究之外，亦以開發具前瞻性之尖端技術與發展以應用為導向的最先進系統為職志</p>
+                                <p class="highlight">台灣資料科學協會</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content work-content">
+                        <div class="row small-fullwidth-row">
+                            <div class="content-cat big-text">
+                                <p><span class="no-nl">2015-09-01</span> till <span class="no-nl">2016-04-30</span>
+                                </p>
+                            </div>
+                            <div class="content-text work-listing education-listing">
+                                <p class="small-center">	<strong>Intern</strong> at <strong><a href="https://www.imoncloud.com/" class="no-nl">imonology</a></strong>
+
+                                </p>
+                                <p>新創公司比起傳統公司更願意研究新技術，透過 Scrum 並且善用於各種工具讓整個開發流程更異於管理控制.</p>
+                                <p class="highlight">imoncloud</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content work-content">
+                        <div class="row small-fullwidth-row">
+                            <div class="content-cat big-text">
+                                <p><span class="no-nl">2012-06-30</span> till <span class="no-nl">2013-06-30</span>
+                                </p>
+                            </div>
+                            <div class="content-text work-listing education-listing">
+                                <p class="small-center">	<strong>Campus Executive Officer/ Intern</strong> at <strong><a href="https://www.asus.com/tw/" class="no-nl">ASUS</a></strong>
+
+                                </p>
+                                <p>公司會透過實戰讓實習生經由支援各種活動來了解一間企業在第一線的戰略規劃以及產業生態.</p>
+                                <p class="highlight">win8 台北產品發表會支援</p>
+                                <p class="highlight">台中資訊展支援</p>
+                                <p class="highlight">台中經銷商大會支援</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content">
+                        <div class="row">
+                            <div class="content-cat big-text">
+                                	<h3>Education</h3>
+
+                                <p>2015-09-01 till <span class="no-nl">2016-07-30</span>
+                                </p>
+                            </div>
+                            <div class="content-text work-listing education-listing">
+                                <p class="heading first-listing">National Chi Nan University</p>
+                                <p class="highlight">Master:	<i>Computer Networking</i>
+
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content education-content">
+                        <div class="row">
+                            <div class="content-cat big-text">
+                                <p>2014-09-01 till <span class="no-nl">2015-04-30</span>
+                                </p>
+                            </div>
+                            <div class="content-text work-listing education-listing">
+                                <p class="heading">Memorial University of Newfoundland</p>
+                                <p class="highlight">Bachelor Exchange Student:	<i>Computer Science</i>
+
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content education-content">
+                        <div class="row">
+                            <div class="content-cat big-text">
+                                <p>2011-09-01 till <span class="no-nl">2015-06-30</span>
+                                </p>
+                            </div>
+                            <div class="content-text work-listing education-listing">
+                                <p class="heading">National Chi Nan University</p>
+                                <p class="highlight">Bachelor:	<i>Computer Science and Information Engineering</i>
+
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content">
+                        <div class="row">
+                            <div class="content-cat big-text">
+                                	<h3>Awards</h3>
+
+                                <p>Master research competition</p>
+                                <p style="margin-top:0.25em;">2016-06-23</p>
+                            </div>
+                            <div class="content-text work-listing">	<strong><p class="heading"></p></strong>
+
+                                <p class="highlight">First Prize</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content">
+                        <div class="row small-fullwidth-row">
+                            <div class="content-cat big-text">
+                                	<h3>Volunteer work</h3>
+
+                            </div>
+                            <div class="content-text work-listing education-listing">
+                                <p class="first-listing small-center">	<strong>volunteer</strong>  <span class="no-nl">at <strong><a href="http://foundation.datasci.tw/">台灣資料科學協會</a></strong></span>
+
+                                </p>
+                                <p>包含協助內部資訊管理，活動工作人員與助教</p>
+                                <p class="highlight">20170212 手把手的深度學習實務助教</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content">
+                        <div class="row">
+                            <div class="content-cat">
+                                 <h3>Skills</h3>
+
+                            </div>
+                            <div class="content-text skills-listing">
+                                <p>	<span class="name">
+											<strong>
+											Web Development
+
+											</strong>
+			            	</span>
+	<span>(beginner):</span>
+HTML, CSS, Javascript,
+                                    PHP</p>
+                                <p>	<span class="name">
+											<strong>
+											Database
+
+											</strong>
+			            	</span>
+	<span>(beginner):</span>
+MySQL, mongodb</p>
+                                <p>	<span class="name">
+											<strong>
+											Data Analysis
+
+											</strong>
+			            	</span>
+	<span>(beginner):</span>
+TFIDF, FB fanpage keyword</p>
+                                <p>	<span class="name">
+											<strong>
+											Linux
+
+											</strong>
+			            	</span>
+	<span>(junior):</span>
+Ubuntu</p>
+                                <p>	<span class="name">
+											<strong>
+											MIS
+
+											</strong>
+			            	</span>
+	<span>(junior):</span>
+NIS, iptable, samba, cacti,
+                                    apache2, permission control</p>
+                                <p>	<span class="name">
+											<strong>
+											Crawling
+
+											</strong>
+			            	</span>
+	<span>(junior):</span>
+Python, FB API, Selenium,
+                                    Phantomjs, requests, BeautifulSoup4</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="content">
+                        <div class="row">
+                            <div class="content-cat">
+                                 <h3>Interests</h3>
+
+                            </div>
+                            <div class="content-text skills-listing">
+                                <p>	<span class="name">
+											<strong>
+												Machine Learning:
+											</strong>
+			            	</span>
+Regression, Classification</p>
+                                <p>	<span class="name">
+											<strong>
+												Deep Learning:
+											</strong>
+			            	</span>
+DNN, CNN</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </body>
+
+</html>
