@@ -180,6 +180,7 @@
         "Python",
         "FB API",
         "Selenium",
+				"Phantomjs",
         "requests",
         "BeautifulSoup4"
       ]
